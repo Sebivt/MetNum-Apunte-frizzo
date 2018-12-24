@@ -6,7 +6,7 @@
 Un problema muy frecuente en distintos ámbitos consiste en, dados
 un conjunto de puntos del plano $(x_1,y_1), \dots, (x_m,y_m)$ y una familia
 de funciones $\mathcal{F}$ determinadas por ciertos parámetros, hallar
-cuál de estas funciones cuyo gráfico se ajusta mejor (es decir, ``pasa más
+una de estas funciones cuyo gráfico se ajusta mejor (es decir, ``pasa más
 cerca'') a dichos puntos. Esto permite, por ejemplo, considerar los resultados
 de un experimento y predecir los valores que se obtendrían para distintos
 valores de una variable involucrada.
@@ -69,7 +69,7 @@ entre $\mat{A} \cdot \vec{x}$ y $\vec{b}$.
 Desde el punto de vista geométrico, existe una interpretación intuitiva para
 este problema. Para todo $\vec{x} \in \reals^n$, el producto $\mat{A}
 \cdot \vec{x}$ describe una combinación lineal de las columnas de $\mat{A}$;
-en otras palabras, $\vec{x} \in \im(\mat{A})$, el subespacio generado por las
+en otras palabras, $\mat{A} \cdot \vec{x} \in \im(\mat{A})$, el subespacio generado por las
 columnas de $\mat{A}$. De todos los elementos de este subespacio, buscamos
 aquel que se encuentre a distancia mínima de $\vec{b}$. Este elemento siempre
 existe y es único: se trata de la proyección ortogonal de $\vec{b}$ sobre el
