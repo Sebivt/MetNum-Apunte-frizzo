@@ -41,7 +41,7 @@ particular del mismo a las soluciones del sistema homogéneo asociado, $\mat{A}
 \cdot \vec{x} = \vec{0}$.
 
 En esta sección, expondremos dos métodos para obtener computacionalmente la
-solucion de un sistema de ecuaciones lineales, en el caso de que esta exista y
+solución de un sistema de ecuaciones lineales, en el caso de que esta exista y
 sea única. La resolución de estos sistemas es un problema importante y
 frecuente en el análisis numérico, ya que estos son útiles a la hora de
 modelar matemáticamente el comportamiento de problemas provenientes de
@@ -160,7 +160,7 @@ $\lambda$ la $i$-ésima fila (columna) de $\mat{A}$.
 \end{bmatrix}$, obtenida de cambiar un 0 de la identidad, ubicado
 en la posición $i,j$, por un valor $\lambda$ cualquiera. Si $\mat{A}$ es una
 matriz cualquiera, multiplicar a izquierda (a derecha) por $\mat{E_2}$
-la suma $\lambda$ veces la fila $j$-ésima (la columna $i$-ésima) a la
+le suma $\lambda$ veces la fila $j$-ésima (la columna $i$-ésima) a la
 fila $i$-ésima (la columna $j$-ésima) de $\mat{A}$.
 \end{enumerate}
 
@@ -186,14 +186,14 @@ hasta llevar $\mat{\tilde A}$ a una forma triangular superior. El método itera
 sobre las columnas de la matriz, buscando en cada paso colocar ceros en los
 lugares que se encuentran debajo de la diagonal. Es decir, el invariante del
 algoritmo es que, en la $k$-ésima iteración, todas las columnas hasta la $k -
-1$ tienen ceros debajo de la diagonal, asegurando que, tras $k$ iteraciones,
+1$ tienen ceros debajo de la diagonal, asegurando que, tras $n-1$ iteraciones,
 la matriz quedará en forma triangular superior.
 
 Más precisamente, en la $k$-ésima iteración, se resta a todas las filas a
 partir de la $k + 1$ un múltiplo de la fila $k$-ésima, con un factor
 $m^{(k)}_i$ elegido convenientemente para cada fila $i$. Esto significa que,
 para todo $i = k+1,\dots,n$, los coeficientes de la fila $i$-ésima quedarán
-\[ a^{(k)}_{i,j} = a^{(k-1)}_{i,j} - m^{(k)}_i \cdot a^{(k-1)}_{k,j}, \]
+\[ a^{(k)}_{i,k} = a^{(k-1)}_{i,k} - m^{(k)}_i \cdot a^{(k-1)}_{k,k}, \]
 y como se quiere dejar un $0$ en la columna $k$-ésima, es decir,
 $a^{(k)}_{i,k} = 0$, debe tomarse, para cada fila $i$, el multiplicador
 \[ m_{i,k} = \frac{a^{(k-1)}_{i,k}}{a^{(k-1)}_{k,k}}. \]
@@ -397,7 +397,7 @@ multiplicadores de cada paso del algoritmo, mientras que $\mat{U}$ es la
 matriz triangulada que se obtiene como resultado final.
 
 No todas las matrices admiten factorización LU. A modo de ejemplo,
-consideremos una matriz $\mat{A} \in \reals^{n \times n}$. Si tiene
+consideremos una matriz $\mat{A} \in \reals^{2 \times 2}$. Si tiene
 factorización LU, entonces existen $a, b, c, d \in \reals$ tales que
 \[ \mat{A} = \mat{L} \cdot \mat{U} = \begin{bmatrix}
         1 & 0 \\
